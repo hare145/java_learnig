@@ -1,3 +1,9 @@
 $(function(){
-  $('.box1').slideDown();
+  $('.boxred').slideDown();
+});
+
+$(function(){
+  $('.boxred').mouseover(function(){
+    $('.boxred').css({'background-color': '#0000FF'});
+  });
 });
