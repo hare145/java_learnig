@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   
+  get 'backs/index'
+  get 'backs/show'
   controller :homes do
     root to: "homes#top"
     resources :homes, only: [:index]
