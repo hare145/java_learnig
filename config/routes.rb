@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get 'buttons/index'
   get 'swipers/index'
   controller :homes do
     root to: "homes#top"
