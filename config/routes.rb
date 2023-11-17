@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'buttons/index'
-  get 'swipers/index'
+
   controller :homes do
     root to: "homes#top"
     resources :homes, only: [:index]
@@ -15,6 +14,17 @@ Rails.application.routes.draw do
     resources :backs, only: [:index, :show]
   end
 
+  controller :samples do
+    resources :samples, only: [:index, :show]
+  end
+  
+  controller :swipers do
+    resources :swipers, only: [:index, :show]
+  end
+  
+  controller :buttons do
+    resources :buttons, only: [:index,]
+  end
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
