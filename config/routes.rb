@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  get 'menu/index'
   controller :homes do
     root to: "homes#top"
     resources :homes, only: [:index]
