@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
 
-  get 'menu/index'
   controller :homes do
     root to: "homes#top"
     resources :homes, only: [:index]
@@ -25,6 +24,10 @@ Rails.application.routes.draw do
   
   controller :buttons do
     resources :buttons, only: [:index,]
+  end
+  
+  controller :menus do
+    resources :menus, only: [:index,]
   end
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
