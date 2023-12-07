@@ -1,0 +1,13 @@
+.tab-area {
+  display: flex;
+}
+.tab {
+  width: calc(100%/3);
+  padding: 5px;
+  text-align: center;/* 文字を中央に。 */
+}
+
+.tab.active {
+  background-color: #000;
+  color: #fff;
+}

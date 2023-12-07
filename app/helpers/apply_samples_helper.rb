@@ -1,0 +1,2 @@
+module ApplySamplesHelper
+end
