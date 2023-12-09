@@ -1,9 +1,15 @@
 
 
 <ul class="tab-area">
-  <li class="tab active">ドラゴンボール</li>
-  <li class="tab">鬼滅の刃</li>
-  <li class="tab">スパイファミリー</li>
+  <li class="tab active">
+    <%= link_to "会計経理関係", dammes_path( company: @soft, work_id: 1), class: "p-1" %>
+  </li>
+  <li class="tab">
+    <%= link_to "労務関係", dammes_path(company: @soft, work_id: 2), class: "p-1" %>
+  </li>
+  <li class="tab">
+    <p>link_toにしないばあい</p>
+  </li>
 </ul>
 
 
