@@ -33,7 +33,7 @@ class ApplySamplesController < ApplicationController
 private
   
   def soft_all
-    Soft.all.public_true.page(params[:page]).per(10)
+    Soft.all.public_true
   end
 
 end

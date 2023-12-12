@@ -1,41 +1,60 @@
 
-
-<ul class="tab-area">
-  <li class="tab active">
-    <%= link_to "会計経理関係", dammes_path( company: @soft, work_id: 1), class: "p-1" %>
-  </li>
-  <li class="tab">
-    <%= link_to "労務関係", dammes_path(company: @soft, work_id: 2), class: "p-1" %>
-  </li>
-  <li class="tab">
-    <p>link_toにしないばあい</p>
-  </li>
-</ul>
-
-
-<div class="panel-area">
-  <div class="panel active">
-    <h2>ドラゴンボール</h2>
-    <ul>
-      <li>孫悟空</li>
-      <li>ベジータ</li>
-      <li>ピッコロ</li>
-    </ul>
-  </div>
-  <div class="panel">
-    <h2>鬼滅の刃</h2>
-    <ul>
-      <li>炭治郎</li>
-      <li>禰豆子</li>
-      <li>我妻善逸</li>
-    </ul>
-  </div>
-  <div class="panel">
-    <h2>スパイファミリー</h2>
-    <ul>
-      <li>アーニャ</li>
-      <li>ロイド</li>
-      <li>ヨル</li>
-    </ul>
-  </div>
+<div class="">
+  <p>
+    </br>
+    </br>
+  </p>
 </div>
+
+
+    <div class="wrap">
+      <ul id="tab-menu">
+        <li>
+          <a href="#tab1" class="active">
+            <%= link_to "会計経理関係", apply_samples_index_path( company: @soft, work_id: 1), remote: true, class: "p-1" %>
+          </a>
+        </li>
+        <li>
+          <a href="#tab2" class="">
+            <%= link_to "労務関係", apply_samples_index_path(company: @soft, work_id: 2), remote: true, class: "p-1" %>
+          </a>
+        </li>
+        <li>
+          <a href="#tab3" class="">
+            <p>link_toにしないばあい</p>
+          </a>
+        </li>
+        <li>
+          <a href="#tab4" class="">
+            TAB4
+          </a>
+        </li>
+      </ul>
+
+      <div id="tab-contents">
+        <div id="tab1" class="tab">
+          <p>TAB1のテキストが入ります。</p>
+        </div>
+
+        <div id="tab2" class="tab">
+          <p>TAB2のテキストが入ります。TAB2のテキストが入ります。</p>
+        </div>
+
+        <div id="tab3" class="tab">
+          <p>TAB3のテキストが入ります。TAB3のテキストが入ります。TAB3のテキストが入ります。</p>
+        </div>
+
+        <div id="tab4" class="tab">
+          <p>TAB4のテキストが入ります。TAB4のテキストが入ります。TAB4のテキストが入ります。TAB4のテキストが入ります。</p>
+        </div>
+      </div>
+    </div>
+    
+    
+    tab1に work_id: 1を表示
+    tab2に work_id: 2
+    tab3に work_id: 3
+    
+    
+
+<%= javascript_pack_tag 'apply_samples/index' %>
