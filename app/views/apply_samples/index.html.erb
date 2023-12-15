@@ -21,32 +21,24 @@
         </li>
         <li>
           <a href="#tab3" class="">
-            <p>link_toにしないばあい</p>
-          </a>
-        </li>
-        <li>
-          <a href="#tab4" class="">
-            TAB4
+            <%= link_to "利用者関係", dammes_path(company: @soft, work_id: 3), remote: true, class: "p-1" %>
           </a>
         </li>
       </ul>
 
       <div id="tab-contents">
         <div id="tab1" class="tab">
-          <p>TAB1のテキストが入ります。</p>
+          <%= render partial: 'shared/soft_cards', locals: { softs: @softs } %> 
         </div>
 
         <div id="tab2" class="tab">
-          <p>TAB2のテキストが入ります。TAB2のテキストが入ります。</p>
+          <%= render partial: 'shared/soft_cards', locals: { softs: @softs } %> 
         </div>
 
         <div id="tab3" class="tab">
-          <p>TAB3のテキストが入ります。TAB3のテキストが入ります。TAB3のテキストが入ります。</p>
+           <%= render partial: 'shared/soft_cards', locals: { softs: @softs } %> 
         </div>
 
-        <div id="tab4" class="tab">
-          <p>TAB4のテキストが入ります。TAB4のテキストが入ります。TAB4のテキストが入ります。TAB4のテキストが入ります。</p>
-        </div>
       </div>
     </div>
     
