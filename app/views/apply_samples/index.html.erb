@@ -21,7 +21,7 @@
         </li>
         <li>
           <a href="#tab3" class="">
-            <%= link_to "利用者関係", dammes_path(company: @soft, work_id: 3), remote: true, class: "p-1" %>
+            <%= link_to "利用者関係", apply_samples_index_path(company: @soft, work_id: 3), remote: true, class: "p-1" %>
           </a>
         </li>
       </ul>
@@ -48,5 +48,7 @@
     tab3に work_id: 3
     
     
+    companyのvalueをどう届けるか
+    実装むずい？
 
 <%= javascript_pack_tag 'apply_samples/index' %>
