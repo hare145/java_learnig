@@ -1,9 +1,14 @@
-$('#tab-contents .tab[id != "tab1"]').hide();
+<script>  $(document).ready(function() {
+    $("#tabs").railsSortable({
+      update: function(event, ui) {
+        var tabId = ui.item.data("id");
+        var position = ui.item.index() + 1;
 
-$('#tab-menu a').on('click', function(event) {
-  $("#tab-contents .tab").hide();
-  $("#tab-menu .active").removeClass("active");
-  $(this).addClass("active");
-  $($(this).attr("href")).show();
-  event.preventDefault();
-});
+        $.ajax({
+          type: "PATCH",
+          url: "/tabs/" + tabId,
+          data: { position: position },
+        });
+      },
+    });
+  });

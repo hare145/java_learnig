@@ -29,6 +29,19 @@ class ApplySamplesController < ApplicationController
       end
     end
   end
+  
+  def sort
+    case params[:order]
+    when 'asc'
+      @softs = Soft.order(created_at: :asc)
+    when 'desc'
+      @softs = Soft.order(created_at: :desc)
+    else
+      @softs = Soft.order(created_at: :desc)
+    end
+
+    render :index
+  end
 
 private
   

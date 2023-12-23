@@ -9,6 +9,9 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 require('jquery')
+require('jquery_ujs')
+require('rails_sortable')
+//= require_tree .
 
 Rails.start()
 Turbolinks.start()

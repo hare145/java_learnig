@@ -6,49 +6,22 @@
   </p>
 </div>
 
+<div id="tabs">
+  <ul>
+    <% @softs.each do |soft| %>
+      <li><%= tab.title %></li>
+    <% end %>
+  </ul>
+</div>
 
-    <div class="wrap">
-      <ul id="tab-menu">
-        <li>
-          <a href="#tab1" class="active">
-            <%= link_to "会計経理関係", apply_samples_index_path( company: @soft, work_id: 1), remote: true, class: "p-1" %>
-          </a>
-        </li>
-        <li>
-          <a href="#tab2" class="">
-            <%= link_to "労務関係", apply_samples_index_path(company: @soft, work_id: 2), remote: true, class: "p-1" %>
-          </a>
-        </li>
-        <li>
-          <a href="#tab3" class="">
-            <%= link_to "利用者関係", apply_samples_index_path(company: @soft, work_id: 3), remote: true, class: "p-1" %>
-          </a>
-        </li>
-      </ul>
+<%= link_to "Sort Asc", sort_tabs_path(order: 'asc'), method: :post %>
+<%= link_to "Sort Desc", sort_tabs_path(order: 'desc'), method: :post %>
 
-      <div id="tab-contents">
-        <div id="tab1" class="tab">
-          <%= render partial: 'shared/soft_cards', locals: { softs: @softs } %> 
-        </div>
 
-        <div id="tab2" class="tab">
-          <%= render partial: 'shared/soft_cards', locals: { softs: @softs } %> 
-        </div>
-
-        <div id="tab3" class="tab">
-           <%= render partial: 'shared/soft_cards', locals: { softs: @softs } %> 
-        </div>
-
-      </div>
-    </div>
-    
-    
-    tab1に work_id: 1を表示
-    tab2に work_id: 2
-    tab3に work_id: 3
-    
-    
-    companyのvalueをどう届けるか
-    実装むずい？
+<script>
+  $(document).ready(function() {
+    $("#tabs").railsSortable();
+  });
+</script>
 
 <%= javascript_pack_tag 'apply_samples/index' %>
