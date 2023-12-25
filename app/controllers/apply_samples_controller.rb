@@ -10,9 +10,6 @@ class ApplySamplesController < ApplicationController
     if @soft.present?
       @softs = @softs.company_search(@soft)
     end
-    if @work.present?
-      @softs = @softs.work_search(@work)
-    end
     if @order.present?
       if @order == "new"
         @softs = @softs.new_search
@@ -28,6 +25,10 @@ class ApplySamplesController < ApplicationController
         @softs = @softs.public_false
       end
     end
+    
+      @softs_1 = @softs.work_search(1)
+      @softs_2 = @softs.work_search(2)
+      @softs_3 = @spfts.work_search(3)
   end
   
   def sort

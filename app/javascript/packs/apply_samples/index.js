@@ -1,4 +1,4 @@
-<script>  $(document).ready(function() {
+  $(document).ready(function() {
     $("#tabs").railsSortable({
       update: function(event, ui) {
         var tabId = ui.item.data("id");

@@ -8,9 +8,18 @@
 
 <div id="tabs">
   <ul>
-    <% @softs.each do |soft| %>
-      <li><%= tab.title %></li>
-    <% end %>
+    <li>
+      <%= render partial: 'shared/work/1works', locals: { search_soft: @soft_1 } %> 
+    </li>
+    
+    <li>
+      <%= render partial: 'shared/work/1works', locals: { search_soft: @soft_2 } %> 
+    </li>
+    
+    <li>
+      <%= render partial: 'shared/work/1works', locals: { search_soft: @soft_3 } %> 
+    </li>
+    
   </ul>
 </div>
 
